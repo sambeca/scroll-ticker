@@ -6,8 +6,12 @@ class Feed extends Component {
     super(props);
   }
 
+  handleScroll(e) {
+    console.log("scrolling");
+  }
+
   render() {
-    return <div className="feed">Hello</div>;
+    return <div className="feed" />;
   }
 }
 
