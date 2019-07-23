@@ -28,7 +28,7 @@ class HeaderTicker extends Component {
       <div className="header-ticker">
         <div className="header-ticker__inner">
           <Ticker direction="toRight" offset="run-in" speed={10}>
-            {index => <h1>{`You scrolled ${scrollY}`}</h1>}
+            {index => <h1>{`Scrolled ${scrollY}`}</h1>}
           </Ticker>
         </div>
       </div>
