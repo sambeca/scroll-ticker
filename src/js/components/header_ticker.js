@@ -13,12 +13,12 @@ class HeaderTicker extends Component {
     };
   }
 
-  _onMouseMove(e) {
+  onMouseMove = e => {
     this.setState({
       mouseX: e.nativeEvent.offsetX,
       mouseY: e.nativeEvent.offsetY
     });
-  }
+  };
 
   setScroll = e => {
     const { scrollTop } = this.state;
@@ -34,7 +34,7 @@ class HeaderTicker extends Component {
   render() {
     const { seconds, mouseX, mouseY, scrollY } = this.state;
     return (
-      <div className="header-ticker" onMouseMove={this._onMouseMove.bind(this)}>
+      <div className="header-ticker" onMouseMove={this.onMouseMove.bind(this)}>
         <div className="header-ticker__inner">
           <Ticker direction="toRight" offset="run-in" speed={10}>
             {index => <h1>{scrollY}</h1>}
