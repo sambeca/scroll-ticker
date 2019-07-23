@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Ticker from "react-ticker";
+import "../../styles/styles.scss";
 
 class footerTicker extends Component {
   constructor(props) {

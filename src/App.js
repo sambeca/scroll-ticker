@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import HeaderTicker from "./components/header_ticker";
-import FooterTicker from "./components/footer_ticker";
+import HeaderTicker from "./js/components/header_ticker";
+import FooterTicker from "./js/components/footer_ticker";
 
 class App extends Component {
   constructor(props) {
