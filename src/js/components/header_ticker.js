@@ -7,19 +7,9 @@ class HeaderTicker extends Component {
     this.state = {
       tickerText: "test",
       scrollY: 0,
-      seconds: 0,
-      mouseX: 0,
-      mouseY: 0
+      seconds: 0
     };
   }
-
-  setMouseData = e => {
-    const { mouseX, mouseY } = this.state;
-    this.setState({
-      mouseX: e.pageX,
-      mouseY: e.pageY
-    });
-  };
 
   setScroll = e => {
     const { scrollTop } = this.state;
@@ -38,7 +28,7 @@ class HeaderTicker extends Component {
       <div className="header-ticker">
         <div className="header-ticker__inner">
           <Ticker direction="toRight" offset="run-in" speed={10}>
-            {index => <h1>{`You were at ${mouseX} ${mouseY}`}</h1>}
+            {index => <h1>{`You scrolled ${scrollY}`}</h1>}
           </Ticker>
         </div>
       </div>
@@ -48,7 +38,6 @@ class HeaderTicker extends Component {
   componentDidMount() {
     this.interval = setInterval(() => this.tick(), 1000);
     window.addEventListener("scroll", this.setScroll);
-    window.addEventListener("mousemove", this.setMouseData);
   }
 
   componentWillUnmount() {
