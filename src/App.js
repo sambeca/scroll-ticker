@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import Ticker from "react-ticker";
+import HeaderTicker from "./components/header_ticker";
+import FooterTicker from "./components/footer_ticker";
 
 class App extends Component {
   constructor(props) {
@@ -10,9 +11,8 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Ticker direction="toRight" offset="100%" speed={10}>
-          {index => <h1>Test</h1>}
-        </Ticker>
+        <HeaderTicker />
+        <FooterTicker />
       </div>
     );
   }
